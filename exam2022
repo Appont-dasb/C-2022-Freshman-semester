@@ -1,0 +1,17 @@
+//Distinguish between sizeof and strlen
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[] = "abc" ;
+	char arr2[] = {'a','b','c',0};
+	printf("%d\n",strlen(arr1)); //output:3
+	printf("%d\n",sizeof(arr1)); //output:4
+  
+  //why ?
+	//For strlen, '0' is not counted towards the string length
+	//However, for sizeof, the string length is still counted
+
+	return 0;
+}
