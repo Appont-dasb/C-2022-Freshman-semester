@@ -120,7 +120,21 @@ int main()
 }
 
 
+Practice
+#include<stdio.h>
+int main()
+{
+	float h = 0.15 ;
+	int n = 0 ;
 
+	while(h<=8844000)
+	{
+		h=2*h;
+		n=n+1;
+	}
+	printf("%d",n) ;
+	return 0;
+}
 
 
 
