@@ -97,3 +97,33 @@ int main ()
 }
 
 
+Class notes
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d",&a);
+	if (a)
+	{
+		a=2;
+		b=3;
+	}
+	else if(a==0)  //a这里得有==
+	{
+		b=2;
+	}else 
+	{
+		b=1;
+	}
+	printf("%d",b);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
