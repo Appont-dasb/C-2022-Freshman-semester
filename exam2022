@@ -137,7 +137,22 @@ int main()
 }
 
 
-
+Branch (select) statements
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int main()
+{
+	int a = 0 ;
+	int b = 2 ;
+	if(a == 1)
+		if(b == 2)
+			printf("hehe\n");
+		else
+			printf("haha\n"); 
+			//无论这里的else和第一个if对齐还是与第二个if对齐，结果均一样
+			//else只会和与他距离最近的If发挥作用
+	return 0;
+}
 
 
 
