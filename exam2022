@@ -137,6 +137,9 @@ int main()
 }
 
 
+//悬空else
+//注意加{}
+//代码要规范
 Branch (select) statements
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
