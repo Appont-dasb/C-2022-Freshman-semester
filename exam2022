@@ -159,6 +159,7 @@ int main()
 
 
 //EOF
+//EOF = end of file ->值-1
 #include<stdio.h>
 
 int main()
