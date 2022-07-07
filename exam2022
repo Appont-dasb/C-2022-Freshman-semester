@@ -164,7 +164,7 @@ int main()
 int main()
 {
 	int ch = 0 ;
-	// ctrl + Z 
+	// when you input:ctrl + Z ,it will be over .
 	while((ch=getchar())!=EOF)
 	{
 		putchar(ch) ;
