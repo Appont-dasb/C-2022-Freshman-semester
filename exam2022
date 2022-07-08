@@ -222,3 +222,40 @@ int main()
 	}while(cet != 'Y'); //先循环再判断
 	return 0;
 }
+
+
+//转载
+//另一种密码输入系统
+//strcmp库函数的应用
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+	char arr[20] = { 0 };
+	//假设正确的密码是字符串“2022”，如何比较？
+	int m = 0;
+	for (m = 0; m < 3; m++)
+	{
+		printf("请输入密码：");
+		scanf("%s", arr);
+		//if (arr == "2022")//这样的写法是错误的，两个字符串比较不能使用==来比较
+		//应该使用字符串函数strcmp
+		if(strcmp(arr,"2022")==0)
+		{
+
+			printf("密码正确\n");
+			printf("进入系统");
+			break;
+		}
+			else
+			{
+				printf("密码错误\n");
+			}
+		
+	}
+	if (m == 3)
+	{
+		printf("退出系统\n");//最多输入三次密码
+	}
+	return 0;
+}
