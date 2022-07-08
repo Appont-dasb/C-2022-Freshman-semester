@@ -173,3 +173,52 @@ int main()
  return 0;
  
 }
+
+
+//do-while
+//输入密码程序
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+int main()
+{
+
+
+	int ch = 0 ;
+	int cet = 0 ;
+	char password[16] = {0};
+	printf("请输入密码：\n");
+	scanf("%s",password);
+
+	while((ch=getchar())!='\n')
+	{
+		;
+	}
+        // 缓冲区还剩一个'\n'
+	// 读取下'\n'
+	printf("请确认密码(Y\\N)：\n"); // 两个\\
+	cet = getchar() ; // Y/N
+	do
+	{
+		
+	if(cet == 'Y')
+	{
+		printf("确认成功\n");
+		break;
+	}
+	else if(cet =='N')
+	{
+		printf("请再次输入密码：\n");
+		
+	    scanf("%s",password);
+		while((ch=getchar())!='\n')
+	{
+		;
+	}
+		printf("请再次确认密码(Y\\N)：\n");
+		cet = getchar(); //这里如若输入N，则将循环下去，直到密码确认成功。
+
+	}
+	}while(cet != 'Y'); //先循环再判断
+	return 0;
+}
