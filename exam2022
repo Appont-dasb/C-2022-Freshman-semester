@@ -278,3 +278,19 @@ int main ()
 	return 0; 
 }
 //最终结果将打印10个“呵呵呵”
+
+
+//变种2
+//也可执行
+#include<stdio.h>
+int main ()
+{
+	int i = 0 ;
+	int j = 0 ;
+	
+	for(i=0, j=0; i<2&j<5; ++i, j++)//循环从i=0,j=0开始，满足条件则执行，++i和j++一样的输出结果，最终打印出2个hehehe。
+	{
+		printf("hehehe\n");
+	}
+	return 0;
+}
