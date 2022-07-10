@@ -370,3 +370,49 @@ int main()
 	}
 	return 0;
 }
+
+
+//演示多个字符从两端移动，向中间汇聚。
+#include<stdio.h>
+#include<string.h>
+#include<windows.h>
+#include<stdlib.h>
+
+int main()
+{
+	//
+	//welcome to china!!!!!!
+	//######################
+	//w####################!
+	//we##################!!
+	//wel################!!!
+	//...
+	//welcome to china!!!!!!
+	
+	//因为数组的最后有一个'\0'
+	//char arr[] = "abc" ;
+	//[a b c \0]
+	// 0 1 2 3
+	//c的下标即为4-2
+	
+	char arr1[] = "welcome to china!!!!!!";
+	char arr2[] = "######################"; //将两个数组初始化
+	int left = 0;
+	//int right = sizeof(arr1)/sizeof(arr1[0])-2; //为什么-2的原因如上所示
+	int right = strlen(arr1) - 1 ; //这种写法更容易理解
+
+	while(left<=right) //循环的条件
+	{
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right]; //将arr2两端的字符用arr1中两端的字符代替
+		printf("%s\n",arr2);
+		//休息一秒
+		Sleep(1000); //单位是毫秒 //头文件是windows.h
+	        system("cls"); //执行系统命令的一个函数-cls - 清空屏幕 //头文件是stdlib.h
+		left++ ;
+		right-- ; //向中间移动
+
+	}
+	printf("%s\n", arr2 );
+	return 0;
+}
