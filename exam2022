@@ -332,3 +332,41 @@ int main()
 		printf("找不到\n");
 	return 0;
 }
+
+
+//二分查找算法
+//折半查找算法
+#include<stdio.h>
+int main()
+{
+	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+	int k = 17 ;
+	//
+	int sz = sizeof(arr)/sizeof(arr[0]); //数组大小
+	int left = 0; //左下标
+	int right = sz - 1 ; //右下标
+
+	while(left<=right) //使用二分查找算法的条件：左下标<=右下标
+	{
+		int mid = (left + right)/2; //中间元素的下标
+		if(arr[mid] > k)
+		{
+			right = mid - 1 ; //新的右下标
+
+		}
+		else if(arr[mid] < k)
+		{
+			left = mid + 1 ; //新的左下标
+		}
+		else
+		{
+			printf("找到了，下标是：%d\n", mid );
+			break ;
+		}
+	}
+	if(left > right) //不满足二分查找法使用的条件，则找不到这个数。
+	{
+		printf("找不到\n");
+	}
+	return 0;
+}
