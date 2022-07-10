@@ -274,7 +274,8 @@ int main()
 	{
 			printf("请输入密码：\n");
 		scanf("%s",password);
-		if(strcmp(password,"2022") == 0)
+		if(strcmp(password,"2022") == 0) //这里的strcmp是一个库函数，可以用来比较两个字符串是否相等。
+		//若相等，则strcmp(password,"2022")的值为0.
 		{
 			printf("密码正确\n");
 			break ;
