@@ -449,3 +449,40 @@ int main()
 	printf("%s\n", arr2 );
 	return 0;
 }
+
+
+//算法实现
+//a最大
+//b次之
+//c最小
+#include<stdio.h>
+int main()
+{
+	int a = 0 ;
+	int b = 0 ;
+	int c = 0 ;
+	scanf("%d%d%d",&a,&b,&c); //输入 2 1 3
+	if(b>=a)
+	{
+		int temp = 0 ;
+		temp = b ;
+		b = a ;
+		a = temp ; //交换变量的值
+	}
+	if(c>=a)
+	{
+		int temp = 0 ;
+		temp = c ;
+		c = a ;
+		a = temp ;
+	}
+	if(c>=b)
+	{
+		int temp = 0 ;
+		temp = c ;
+		c = b ;
+		b = temp ;
+	}
+	printf("%d %d %d", a, b, c);
+	return 0 ;
+}
