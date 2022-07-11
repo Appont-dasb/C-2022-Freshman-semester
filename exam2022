@@ -486,3 +486,23 @@ int main()
 	printf("%d %d %d", a, b, c);
 	return 0 ;
 }
+
+
+//辗转相除法✨
+//求两个数m、n的最大公约数
+#include<stdio.h>
+int main()
+{
+	int m = 0 ;
+	int n = 0 ;
+	int r = 0 ;
+	scanf("%d%d",&m,&n);
+	while(r = m%n)
+	{		
+		//r = m%n ; // 可以将这个式子放在条件中，可以减少一些步骤
+		m = n ;
+		n = r ;
+	}
+	printf("%d",n);
+    return 0;
+}
