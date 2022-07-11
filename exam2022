@@ -523,6 +523,33 @@ int main()
 			count++ ; //标记
 		}
 	}
-	printf("一共有：%d天\n",count);
+	printf("\n一共有：%d天\n", count) ;
+	return 0;
+}
+
+
+//打印100到200之间的素数
+#include<stdio.h>
+int main()
+{
+	int i = 0 ;
+	int count = 0 ;
+	for(i=100;i<=200;i++)
+	{
+		//判断是否为素数的条件
+		//1.试除法
+		int j = 0 ;
+		for(j=2; j<i; j++)
+		{
+			if(i%j == 0)
+				break ; //素数的特点是其因数（不叫公倍数）只有 1和它本身
+		}
+		if(i==j)
+		{
+			printf("%d ",i);
+			count++; //如果i除以j的余数为0，且i和j相等，便可以判断出这个数是素数。
+		}
+	}
+	printf("\n一共有%d个\n",count);
 	return 0;
 }
