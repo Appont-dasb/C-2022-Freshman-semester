@@ -495,12 +495,12 @@ int main()
 {
 	int m = 0 ;
 	int n = 0 ;
-	int r = 0 ;
-	scanf("%d%d",&m,&n);
-	while(r = m%n)
+	int r = 0 ;//创建一个变量来储存余数。
+	scanf("%d%d",&m,&n);//24 12
+	while(r = m%n) //余数为0，循环结束
 	{		
-		//r = m%n ; // 可以将这个式子放在条件中，可以减少一些步骤
-		m = n ;
+		//r = m%n ;// 可以将这个式子放在条件中，可以减少一些步骤。
+		m = n ; //
 		n = r ;
 	}
 	printf("%d",n);
