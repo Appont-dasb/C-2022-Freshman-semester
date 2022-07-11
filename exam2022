@@ -506,3 +506,23 @@ int main()
 	printf("%d",n);
     return 0;
 }
+
+
+//统计1000年到2000年内的所有闰年的年份
+//并计算一共有多少天
+#include<stdio.h>
+int main()
+{
+	int year = 0 ;
+	int count = 0 ;
+	for(year=1000;year<=2000;year++)
+	{
+		if((year%4==0) && (year%100!=0) ||(year%400==0)) //为闰年的条件
+		{
+			printf("%d ",year);
+			count++ ; //标记
+		}
+	}
+	printf("一共有：%d天\n",count);
+	return 0;
+}
