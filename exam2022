@@ -607,3 +607,30 @@ int main()
 	printf("%lf",sum);
 	return 0;
 }
+
+
+//！！！！！！
+//期末考试最后一个解答题
+//求10个整数的最大值
+#include<stdio.h>
+int main()
+{
+	int arr[] = {-1,-2,-3,-4,-5,-6,-7,-8,-9,-10};
+	int i = 0 ;
+	int max = arr[0] ; //最大值  
+
+	//如果初始化max为0，正如这个数组所示，结果输出错误，
+	//并且无论初始化为任意一个常数，都有可能会对结果产生影响
+	//所以将max初始化为数组arr中的任意一个整数的值
+
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for(i=0; i<sz; i++) //这里的i可以从1开始
+	{
+		if(arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	printf("%d\n", max );
+	return 0 ;
+}
