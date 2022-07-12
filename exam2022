@@ -573,3 +573,37 @@ int main()
 	printf("count= %d\n",count);
 	return 0;
 }
+
+
+//求1/1-1/2+1/3-1/4+...-1/100的值
+#include<stdio.h> //比较繁
+int main()
+{
+	float sum1 = 0 ,sum2 = 0 ;
+	int i = 0 ,j = 0 ;
+	for(i=1; i<=100; i+=2)
+	{
+		sum1 += 1.0 / i; //注意要想得到小数的结果，使用1.0
+	}
+	for(j=2; j<=100; j+=2)
+	{
+		sum2 += (-1.0) / j;
+	}
+	printf("%f",sum1+sum2);
+	return 0;
+}
+
+#include<stdio.h> //用flag来代表+1，-1✨
+int main()
+{
+	double sum = 0.0;
+	int flag = 1;
+	int i = 0 ;
+	for(i=1; i<=100; i++)
+	{
+		sum += flag * 1.0 / i;
+		flag = -flag ; //标记
+	}
+	printf("%lf",sum);
+	return 0;
+}
