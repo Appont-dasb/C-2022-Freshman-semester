@@ -797,3 +797,30 @@ again:
 
 	return 0;
 }
+
+
+//用while代替
+#include<stdio.h>
+#include<Windows.h>
+#include<string.h>
+int main()
+{
+	char arr[20] = {0} ;
+	system("shutdown -s -t 60");
+    while(1)
+	{
+	printf("你的电脑将在1分钟后关闭，输入:“我是猪”即可阻止。\n告诉我你是猪么？\n");
+	scanf("%s",arr);
+	if(strcmp(arr,"我是猪！") == 0)
+	{
+		system("shutdown -a");
+		printf("哈哈哈，我就知道你是只猪！\n");
+		break ;
+	}
+	if(strcmp(arr,"我是猪") == 0)
+	{
+		printf("不对哦，在后面加个“！”试试吧！\n");
+	}
+	}
+	return 0;
+}
