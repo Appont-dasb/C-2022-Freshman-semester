@@ -772,3 +772,28 @@ int main()
 	}while(input) ;
 	return 0 ;
 }
+
+
+//命令关机程序
+//goto语句，做好标记后，goto返回到标记的地方。
+#include<stdio.h>
+#include<Windows.h> //系统命令函数system头文件
+#include<string.h> //字符串函数strcmp头文件
+int main()
+{
+	char arr[20] = {0} ;
+	system("shutdown -s -t 60"); //关机 在 60s后
+again:
+	printf("你的电脑将在1分钟后关闭，输入:“我是猪！”即可阻止。\n告诉我，你是猪么？\n");
+	scanf("%s", arr); //字符串储存再字符型数组中
+	if(strcmp(arr,"我是猪！") == 0) //比较两个字符串 //strcmp库函数的用法在上面已经讲过
+	{
+		system("shutdown -a"); //取消关机
+	}
+	else
+	{
+		goto again ; //返回到again的地方
+	}
+
+	return 0;
+}
