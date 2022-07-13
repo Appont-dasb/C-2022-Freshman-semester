@@ -747,7 +747,8 @@ void game()
 		}
 	}
 }
-int main()
+
+int main() //主函数，实现主要部分
 {
 	int input = 0 ;
 	
