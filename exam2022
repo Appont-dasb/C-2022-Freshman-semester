@@ -688,3 +688,87 @@ int main()
 	}
 	return 0;
 }
+
+
+//简单的猜数字游戏
+//涉及time函数和rand随机值函数
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void menu()
+{
+	printf("*************************************\n");
+	printf("****  1.start game  2.exit game  ****\n");
+	printf("*************************************\n");
+}
+
+ 
+    //#define RAND_MAX 0x7fff //-0x开头为十六进制数，值为7fff，十进制为32767
+    
+    //time_t time(time_t *timer)
+    //time_t
+
+void game()
+{
+	//1.先生成一个随机数
+	//2.猜数字
+	int guess = 0 ;
+	int ret = 0 ; //rand()的值再0到RAND_MAX(32767)之间
+	srand((unsigned int)time(NULL)); 
+	
+	//设置rand()，不然每次的结果都一样
+	//srand中的数应为一个随机数
+	//时间戳！一个时刻变化的数字
+	//从1970.1.1的0:0:0开始到现在(xxxx)单位是秒(s)。
+
+	ret = rand()%100+1 ; //生成一个1-100的随机数
+        //这里之所以取除以100的余数，是因为除以100后，余数一定是1-99之间，再加1，范围就是1-100。
+
+	//printf("请猜数字:>");
+	//scanf("%d",&guess);  //这个地方不能写printf和scanf
+	//会导致下面进入死循环！！！
+	
+	while(1) //条件恒为真！
+	{
+		printf("请猜数字:>");
+		scanf("%d",&guess);
+		if(ret>guess)
+		{
+			printf("猜小了！\n");
+		}
+		else if(ret<guess)
+		{
+			printf("猜大了！\n");
+		}
+		else
+		{
+			printf("恭喜你，猜对了！数字就是：%d\n", guess);
+			break ;
+		}
+	}
+}
+int main()
+{
+	int input = 0 ;
+	
+	do
+	{
+		menu() ;
+		printf("请选择:>\n");
+		scanf("%d", &input);
+		if(input == 1)
+		{
+			game();
+		}
+		else if(input == 0)
+		{
+			printf("退出游戏！\n");
+		}
+		else
+		{
+			printf("选择错误!\n");
+		}
+
+	}while(input) ;
+	return 0 ;
+}
