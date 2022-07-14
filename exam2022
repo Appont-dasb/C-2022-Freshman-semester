@@ -837,3 +837,20 @@ int main()
 
 函数和递归
 
+//库函数的使用
+//字符串函数strcpy
+//char * strcpy ( char * destination, const char * source );
+//括号中先是：目的地的指针地址，后面是：原指针地址
+//作用是：在目的字符串里拷贝一份原字符串的内容，包括\n。
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[] = "bit";
+	char arr2[20] = "1234";
+
+	strcpy(arr2,arr1);
+	printf("%s\n",arr2);
+
+	return 0 ;
+}
