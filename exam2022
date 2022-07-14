@@ -817,3 +817,22 @@ int main()
 
 	return 0 ;
 }
+
+
+//函数memset
+//作用：更改字符串内的字符
+//void * memset ( void * ptr, int value, size_t num );
+//括号内第一个放指针，第二个放值，第三个放数字。
+
+/* memset example */
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+{
+  char str[] = "almost every programmer should know memset!";
+  memset (str, '-', 6);
+  puts (str); //puts打印str
+  
+  return 0;
+}
