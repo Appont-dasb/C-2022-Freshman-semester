@@ -823,6 +823,7 @@ int main()
 //作用：更改字符串内的字符
 //void * memset ( void * ptr, int value, size_t num );
 //括号内第一个放指针，第二个放值，第三个放数字。
+//数字不能超过原字符串的长度，会溢出！
 
 /* memset example */
 #include <stdio.h>
@@ -831,7 +832,7 @@ int main()
 int main ()
 {
   char str[] = "almost every programmer should know memset!";
-  memset (str, '-', 6);
+  memset (str, '-', 6); //这里数字不能超过原字符串的长度，会溢出！
   puts (str); //puts打印str
   
   return 0;
