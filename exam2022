@@ -929,3 +929,44 @@ int main()
 	printf("\n%d",count);
 	return 0;
 }
+
+
+//✨用函数实现二分查找
+//                    ↓本质上arr是一个指针
+int binary_search(int arr[], int i , int sz)
+{
+	int left = 0;
+	int right = sz ; //所以将求sz的步骤放在主函数中，不然求到的sz不是数组的大小 sz错误结果为1
+	while(left <= right)
+	{
+		int mid = (left + right) / 2;
+		if(i<arr[mid])
+		{
+			right = mid - 1; //当i小于中间元素时，右端重新赋值为原中间元素-1
+		}
+		else if(i>arr[mid])
+		{
+			left = mid + 1; // 当i大于中间元素时，右端重新赋值为原中间元素+1
+		}
+		else
+		{
+			return mid ;
+		}
+	}
+	//if(left > right) //不用写
+		return -1 ;
+}
+
+
+#include<stdio.h>
+int main()
+{
+	int arr[] = {0,1,2,3,4,5,6,7,8,9};
+	int k = 7 ;
+	int sz = sizeof(arr) / sizeof(arr[0]) - 1;
+	//                         ↓arr传递到函数中的是数组的首元素的地址
+	int result = binary_search(arr,k,sz) ;
+
+	printf("%d\n",result);
+	return 0;
+}
