@@ -996,3 +996,16 @@ int main()
 
 	return 0 ;
 }
+
+
+//嵌套
+//链式访问
+#include<stdio.h>
+int main()
+{
+	printf("%d", printf("%d", printf("%d", 40))); //它的值是其打印的数字个数
+	//printf函数
+	//Return Value
+	//Each of these functions returns the number of characters printed, or a negative value.
+	return 0 ;
+}
