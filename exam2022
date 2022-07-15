@@ -840,14 +840,14 @@ int main ()
 
 
 //使用函数达成交换
-void Swap1(int x ,int y) //不会成功交换..//✨x,y和a,b没有直接关系
+void Swap1(int x ,int y) //不会成功交换.. //✨x,y和a,b没有直接关系 //x,y形参
 {
 	int tmp = 0;
 	tmp = x ; //无论这里是x,y还是a,b都不行
 	x = y ;
 	y = tmp ;
 }
-void Swap2(int* x , int * y) //🏀交换成功//使用指针地址
+void Swap2(int* x , int * y) //🏀交换成功 //使用指针地址 //x,y形参
 {
 	int tmp = 0;
 	tmp = *x;
@@ -861,7 +861,7 @@ int main()
 	int b = 20 ;
 	printf("%d %d\n", a ,b);
 	// Swap1(a , b);
-	Swap2(a , b);
+	Swap2(a , b); //a,b实参
 	printf("%d %d\n", a ,b);
 
 	return 0;
