@@ -970,3 +970,27 @@ int main()
 	printf("%d\n",result);
 	return 0;
 }
+
+
+//每调用一次这个函数，num的值将增加1
+int ADD(int * p)
+{
+	//*p++; //不能写*p++的原因是：++的优先级大于*，会导致先进行++后进行*
+	(*p)++ ;🏀
+}
+
+#include<stdio.h>
+int main()
+{
+	int num = 0;
+	ADD(&num);
+	printf("num = %d\n",num);
+
+	ADD(&num);
+	printf("num = %d\n",num);
+
+	ADD(&num);
+	printf("num = %d\n",num);
+
+	return 0 ;
+}
