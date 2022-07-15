@@ -801,6 +801,7 @@ int main()
 函数和递归
 
 //库函数的使用
+
 //字符串函数strcpy
 //char * strcpy ( char * destination, const char * source );
 //括号中先是：目的地的指针地址，后面是：原指针地址
@@ -839,6 +840,8 @@ int main ()
 }
 
 
+//自定义函数
+
 //使用函数达成交换
 void Swap1(int x ,int y) //不会成功交换.. //✨x,y和a,b没有直接关系 //x,y形参
 {
@@ -865,4 +868,30 @@ int main()
 	printf("%d %d\n", a ,b);
 
 	return 0;
+}
+
+
+//形参：形式参数 - 函数名后括号中的变量，因为形参只有在函数被调用的过程中才实例化（分配内存单元），所以叫形参。
+//形参当函数调用完成后就自动销毁了，因此形参只在函数中有效。
+//实参：实际参数 - 真是传给函数的参数
+//实参可以是：常量、变量、表达式、函数等。
+//无论实参是何种类型的量，在进行函数调用时，他们都必须又确定的值，以便把这些值传送给形参。
+
+//求两个数的较大值
+int get_max(int a , int b)
+{
+	int z = 0;
+	z = (a>b) ? a : b ;
+	return z ;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0 ;
+	int b = 0;
+	int max = 0;
+	scanf("%d%d",&a , &b);
+	max  = get_max(a , b); //这里的a,b都是实参
+	printf("max = %d",max );
+	return 0 ;
 }
