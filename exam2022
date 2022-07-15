@@ -1009,3 +1009,54 @@ int main()
 	//Each of these functions returns the number of characters printed, or a negative value.
 	return 0 ;
 }
+
+
+//函数声明
+
+int Add(int x , int y); //;不能忘!!! //在前面声明，不然会识别不到
+
+#include<stdio.h>
+int main()
+{
+	int a = 10 ;
+	int b = 20 ;
+	int sum = 0;
+	sum = Add(a,b);
+	printf("%d\n",sum);
+	return 0;
+}
+
+//函数定义
+int Add(int x ,int y)
+{
+	int z = x + y;
+	return z; 
+}
+
+
+//又可以将函数的声明放在头文件中，将定义放在源文件中
+
+add.h
+//函数声明
+int Add(int x , int y); //;不能忘!!!
+
+add.c
+//函数定义
+int Add(int x ,int y)
+{
+	int z = x + y;
+	return z; 
+}
+
+//调用
+#include<stdio.h>
+#include"add.h" //调用自己写的函数用""
+int main()
+{
+	int a = 10 ;
+	int b = 20 ;
+	int sum = 0;
+	sum = Add(a,b);
+	printf("%d\n",sum);
+	return 0;
+}
