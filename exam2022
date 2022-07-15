@@ -898,6 +898,8 @@ int main()
 }
 
 
+//exercises
+
 //函数判断是否为素数
 #include<math.h>
 int is_prime(int i)
