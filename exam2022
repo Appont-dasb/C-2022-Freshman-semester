@@ -1147,3 +1147,36 @@ int main ()
 	printf("len = %d\n", len);
 	return 0;
 }
+
+
+//认识库函数malloc
+//作用：malloc为动态内存分配函数，用于申请一块连续的指定大小的内存块区域以void*类型（转换为我们需要的类型）返回分配的内存区域地址
+// malloc example: random string generator //随机字符串生成
+#include <stdio.h>      // printf, scanf, NULL
+#include <stdlib.h>     // malloc, free, rand 
+
+int main ()
+{
+  int i,n;
+  char * buffer;
+
+  printf ("How long do you want the string? \n");
+  scanf ("%d", &i);
+
+  buffer = (char*) malloc (i+1); 
+  //malloc函数返回的是无类型指针
+  //使用时一定要注意一定要强制转换为所需要的类型
+  //buffer是指向char类型，大小为i+1的数组。
+  
+  if (buffer == NULL) exit (1); //exit (1)表示异常退出
+
+  for (n=0; n<i; n++)
+    buffer[n] = rand()%26 + 'a'; //buffer缓冲区//rand%26的余数范围是1-25，所以字符串中字符范围为26个小写字母。
+  buffer[i] = '\0'; //第i+1个字符为'\0'
+
+  printf ("Random string: %s\n",buffer);
+  free (buffer);//在使用malloc开辟空间时，使用完成一定要释放空间
+  //如果不释放会照成内存泄漏。
+
+  return 0;
+}
