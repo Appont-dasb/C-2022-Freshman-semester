@@ -1037,8 +1037,13 @@ int Add(int x ,int y)
 //又可以将函数的声明放在头文件中，将定义放在源文件中
 
 add.h
+#ifndef __Add_H__ //如果Add.h这个头文件没有被定义，才向下执行 //防止多次引用，占据内存空间
+#define __Add_H__
+
 //函数声明
 int Add(int x , int y); //;不能忘!!!
+
+#endif
 
 add.c
 //函数定义
