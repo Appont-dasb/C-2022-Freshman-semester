@@ -1065,3 +1065,36 @@ int main()
 	printf("%d\n",sum);
 	return 0;
 }
+
+
+//函数递归🐉🐉🐉
+
+#define _CRT_SECURE_NO_WARNINGS 1
+
+//递归
+//接受一个整型值（无符号），按照顺序打印它的每一位
+#include<stdio.h>
+void print(int n) //1234
+{
+	if(n>9)
+	{
+		print(n/10);
+	}
+	printf("%d ",n%10);
+}
+
+int main()
+{
+	unsigned int num = 0 ;
+	scanf("%d", &num) ;
+	//递归
+
+	print(num);
+	//依次将执行如下步骤
+	//print(1234)
+	//print(123) 4
+	//print(12) 3 4
+	//print(1) 2 3 4
+
+	return 0;
+}
