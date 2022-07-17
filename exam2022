@@ -1255,6 +1255,8 @@ int main()
 
 //1 1 2 3 5 8 13 21 34 55
 //描述第n个斐波那契数
+//使用递归的方法较为复杂，建议使用循环的方式
+//
 #include<stdio.h>
 int count = 0;
 int Fib(int n)
@@ -1283,3 +1285,6 @@ int main()
 	printf("count = %d\n",count);
 	return 0;
 }
+
+
+//在使用递归时，要注意效率和栈溢出
