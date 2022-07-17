@@ -1247,7 +1247,7 @@ int main()
 	scanf("%d",&n);
 	//ret = Fac1(n);
 	ret = Fac2(n);
-	
+	//TDD - 测试驱动开发（思路为：先考虑函数怎么用，在想函数怎么定义）
 	printf("%d\n",ret); //循环的方式 //递归
 	return 0;
 }
