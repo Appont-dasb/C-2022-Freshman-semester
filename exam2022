@@ -1213,3 +1213,41 @@ int main()
    free (a);  // 释放内存
    return(0);
 }
+
+
+//函数的递归和迭送
+//求n的阶乘
+#include<stdio.h>
+//int Fac1(int n)
+//{
+//	int i = 0;
+//	int ret = 1 ;
+//	for(i=1;i<=n;i++)
+//	{
+//		ret *= i;
+//	}
+//	return ret;
+//}
+
+int Fac2(int n)
+{
+	if(n<=1) //即若 n等于1，返回1
+	{
+		return 1 ;
+	}
+	else
+	{
+		return n * Fac2(n-1) ; //若n大于1则返回n * Fac2(n-1)
+	}
+}
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf("%d",&n);
+	//ret = Fac1(n);
+	ret = Fac2(n);
+	
+	printf("%d\n",ret); //循环的方式 //递归
+	return 0;
+}
