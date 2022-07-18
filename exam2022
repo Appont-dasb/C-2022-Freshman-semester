@@ -9,8 +9,8 @@ int main()
 {
 	char arr1[] = "abc" ;
 	char arr2[] = {'a','b','c',0};
-	printf("%d\n",strlen(arr1)); //output:3
-	printf("%d\n",sizeof(arr1)); //output:4
+	printf("%d\n",strlen(arr2)); //output:3
+	printf("%d\n",sizeof(arr2)); //output:4
   
   //why ?
 	//For strlen, '0' is not counted towards the string length
@@ -20,17 +20,18 @@ int main()
 }
 
 
-If arr1 does not contain a 0.
+If arr2 does not contain a 0.
 #include<stdio.h>
 #include<string.h>
 int main()
 {
 	char arr1[] = "abc" ;
 	char arr2[] = {'a','b','c'};
-	printf("%d\n",strlen(arr1)); //output:3
-	printf("%d\n",sizeof(arr1)); //output:Random value
-	it will be random value .
+	printf("%d\n",strlen(arr2)); //output:Random value,it will be random value .
+	printf("%d\n",sizeof(arr2)); //output:3
 	
+	printf("%d\n",strlen(arr1)); //3
+	printf("%d\n",sizeof(arr1)); //4	
         return 0 ;
   }
 
@@ -1316,3 +1317,36 @@ int main()
 	printf("ret = %d\n",ret);
 	return 0;
 }
+
+
+//数组🦈🦈🦈
+
+
+//数组的初始化
+//对比sizeof和strlen
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[] = "abc" ;
+	char arr2[] = {'a','b','c',0};
+	printf("%d\n",strlen(arr1)); //output:3
+	printf("%d\n",sizeof(arr1)); //output:4
+
+	return 0;
+}
+
+//
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[] = "abc" ;
+	char arr2[] = {'a','b','c'};
+	printf("%d\n",strlen(arr2)); //output:Random value
+	printf("%d\n",sizeof(arr2)); //output:3
+	
+        return 0 ;
+  }
+//'\0'是字符串结束的标志，不算做字符串的内容
