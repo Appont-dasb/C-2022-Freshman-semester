@@ -1434,4 +1434,20 @@ int main()
 }
 
 
+//数组的名字arr的意义
+#include<stdio.h>
+int main()
+{
+	int arr[] = {1,2,3,4,5,6,7};
+	printf("%p\n",arr);
+	printf("%p\n",arr+1);
 
+	printf("%p\n",&arr[0]);
+	printf("%p\n",&arr[0]+1);
+
+	printf("a = %p\n",&arr); //&arr是数组的地址
+	printf("b = %p\n",&arr+1);
+	//a和b相差28（arr数组的大小）
+	return 0;
+
+}
