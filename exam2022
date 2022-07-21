@@ -1470,7 +1470,7 @@ int main()
 //🤖
 #define _CRT_SECURE_NO_WARNINGS 1
 
-//不添加第三个变量，让a 和 b的值交换 
+//不添加第三个变量，让 a 和 b的值交换 
 #include<stdio.h>
 int main()
 {
@@ -1478,9 +1478,20 @@ int main()
 	int b = 3 ;
 	printf("a = %d b = %d\n",a,b);
 
-	a = a - b ; //a 为 a-b
-	b = a + b ; //b 为 a
-	a = b - a ; //a 为 b
+	//可能会出现溢出的情况
+	//a = a - b ; //a 为 a-b
+	//b = a + b ; //b 为 a
+	//a = b - a ; //a 为 b
+
+	//按位异或，不会溢出
+	a = a^b ;
+	b = a^b ;
+	a = a^b ;
+
 	printf("a = %d b = %d\n",a,b);
 	return 0;
 }
+
+//但在企业中
+//采用第三个变量的方法，代码的可读性高，效率高
+//按位异或的方法，可读性差，效率低于其他方法
