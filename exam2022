@@ -1467,3 +1467,20 @@ int main()
 //除此1，2两种情况之外，所有的数组名都表示数组首元素的地址。
 
 
+//🤖
+#define _CRT_SECURE_NO_WARNINGS 1
+
+//不添加第三个变量，让a 和 b的值交换 
+#include<stdio.h>
+int main()
+{
+	int a = 5 ;
+	int b = 3 ;
+	printf("a = %d b = %d\n",a,b);
+
+	a = a - b ; //a 为 a-b
+	b = a + b ; //b 为 a
+	a = b - a ; //a 为 b
+	printf("a = %d b = %d\n",a,b);
+	return 0;
+}
