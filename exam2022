@@ -1495,3 +1495,36 @@ int main()
 //但在企业中
 //采用第三个变量的方法，代码的可读性高，效率高
 //按位异或的方法，可读性差，效率低于其他方法
+
+
+
+//在整型数组中找到唯一一个出现过一次的数
+//暴力求解
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int j = 0 ;
+	//int count = 0; //不能放在这儿
+	int arr[] = {1,2,3,4,5,1,2,3,4};
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for(i=0; i< sz ;i++)
+	{
+		int count = 0 ; //必须放在for循环里面！！！
+		
+		for(j=0; j<sz; j++)
+		{
+			if(arr[i] == arr[j])
+			{
+				count++;
+			}
+		}
+	
+	if(count == 1)
+	{
+		printf("单身狗是：%d\n",arr[i]);
+		break;
+	}
+	}
+	return 0;
+}
