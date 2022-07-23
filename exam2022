@@ -26,7 +26,7 @@ int main()
 {
 	char arr1[] = "abc" ;
 	char arr2[] = {'a','b','c'};
-	printf("%d\n",strlen(arr2)); //output:Random value,it will be random value .
+	printf("%d\n",strlen(arr2)); //output:Random value, it will be random value.
 	printf("%d\n",sizeof(arr2)); //output:3
 	
 	printf("%d\n",strlen(arr1)); //3
@@ -36,28 +36,6 @@ int main()
 
 '\0'是字符串结束的标志，不算做字符串的内容
 
-
-
-//The job task before that
-//Item A job
-//Binary one-time equations（二元一次方程）
-#include<stdio.h>
-#include<math.h>
-int main ()
-{
-	float a,b,c;
-	float x1,x2;
-	float A,B,C,D;
-	scanf("%f%f%f",&a,&b,&c);
-	A=sqrt(b*b-4*a*c); //deta:∆
-	B=(-b+A);
-	C=(-b-A);
-	D=2*a;
-	x1=B/D;
-	x2=C/D; //The values of the two solutions
-	printf("x1=%.2f,x2=%.2f",x1,x2); //Prints out the results
-	return 0;
-}
 
 
 Class notes
