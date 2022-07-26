@@ -1576,3 +1576,15 @@ int main()
 
 	return 0;
 }
+
+int main()
+{
+	int a = 2 ;
+	int b = a << 1;
+
+	printf("%d\n", b);
+	return 0;
+}
+//左移操作符
+//左边丢弃，右边补0。
+//且，左移一位相当于 -> 原有数值乘2
