@@ -1836,3 +1836,15 @@ int main ()
 		printf("c\n");
 	return 0 ;
 }
+
+
+//关于整型提升
+int main ()
+{
+	char c = 1 ;
+	//%u是输入输出格式说明符，表示以unsigned int格式输入输出数据
+	printf("%u\n",sizeof(c));//1
+	printf("%u\n",sizeof(+c));//4  //c只要参与表达式运算，就会发生整型提升
+	printf("%u\n",sizeof(!c));//4
+	return 0 ;
+}
