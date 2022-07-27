@@ -1696,7 +1696,7 @@ int main ()
 	// 11111111111111111111111111111011   ---② ~(1<<2)
 	//让1变成↓
 	// 00000000000000000000000000001011
-	a = a & (~(1<<2)) ;
+	a = a & (~(1<<2)) ;//✨
 	printf("%d\n",a);
 	return 0;
 }
@@ -1708,7 +1708,7 @@ void test1(int arr[])
 }
 void test2(char ch[])
 {
-	printf("%d\n",sizeof(ch));  //数组传参传递的是首元素的地址，即指针类型
+	printf("%d\n",sizeof(ch));  //数组传参传递的是首元素的地址，即指针类型✨✨
 }
 int main ()
 {
@@ -1720,5 +1720,24 @@ int main ()
 	test1(arr); //4
 	test2(ch);  //4
 
+	return 0;
+}
+
+//重要！
+int main ()
+{
+	//int a = 0;
+	int a = 1 ;
+
+	int b = 2 ;
+	int c = 3 ;
+	int d = 4 ;
+	int i = 0 ;
+
+	//i = a++ && ++b && d++ ; //注意：对于&&，a在这里为0后，右边代码不进行
+	i = a++ || ++b || d++ ; //注意：对于||，a为1之后，右边代码同样不会进行了！！！✨✨✨
+
+	//printf("a = %d b = %d b = %d c = %d",a,b,c,d);//1 2 3 4
+	printf("a = %d b = %d b = %d c = %d",a,b,c,d); //2 2 3 4
 	return 0;
 }
