@@ -1860,3 +1860,30 @@ int main ()
 //a*b  c*d  e*f
 //
 //若a或b或c或..为表达式，则会出现问题！！
+
+//有问题
+c + --c;
++操作符的左操作数的获取在有操作符之前还是之后求值。所以结果是不可预测的，是有歧义的！
+
+//非法表达式
+int main()
+{
+	int i = 10 ;
+	i = i-- - --i *(i = -3) * i++ + ++i ;//有太多的计算路径，非法代码！
+	printf("%d\n",i);
+	return 0 ;
+}
+
+//非法代码
+int fun ()
+{
+	static int count = 1 ; //这里是静态变量
+	return ++count ;
+}
+int main()
+{
+	int answer ;
+	answer = fun() - fun() * fun() ; //这里不知道哪个fun()函数先调用！！
+	printf("%d\n",answer);
+	return 0;
+}
