@@ -1700,3 +1700,25 @@ int main ()
 	printf("%d\n",a);
 	return 0;
 }
+
+
+void test1(int arr[])
+{
+	printf("%d\n",sizeof(arr)); //数组传参传递的是首元素的地址，即指针类型 对于32位计算机系统来说即大小为4
+}
+void test2(char ch[])
+{
+	printf("%d\n",sizeof(ch));  //数组传参传递的是首元素的地址，即指针类型
+}
+int main ()
+{
+	int arr[10] = {0};
+	char ch[10] = {0};
+	printf("%d\n",sizeof(arr)); //40
+	printf("%d\n",sizeof(ch)); //10
+
+	test1(arr); //4
+	test2(ch);  //4
+
+	return 0;
+}
