@@ -1848,3 +1848,15 @@ int main ()
 	printf("%u\n",sizeof(!c));//4
 	return 0 ;
 }
+
+
+//有问题的表达式
+// a*b + c*d + e*f
+//
+//表达式有两种不同的路径完成
+//①
+//a*b  c*d  a*b+c*d  e*f  a*b+c*d+e*f
+//②
+//a*b  c*d  e*f
+//
+//若a或b或c或..为表达式，则会出现问题！！
