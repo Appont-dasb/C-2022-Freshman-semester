@@ -1670,3 +1670,14 @@ int main ()
 	printf("%d\n",b);
 	return 0 ;
 }
+
+
+int main ()
+{
+	short s = 0 ;
+	int a = 5 ;
+	//printf("%d\n",sizeof(s = a + 5)); //赋值给s，所以计算s的所占内存大小
+	printf("%d\n",(s = a + 5)); //下面的s的值也会受到影响.
+	printf("%d\n",s);
+	return 0;
+}
