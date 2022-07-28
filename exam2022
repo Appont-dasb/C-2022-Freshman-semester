@@ -1889,3 +1889,35 @@ int main()
 }
 
 //！！！要有唯一的表达路径✨✨✨
+
+
+
+//指针👽👽👽
+
+
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+int main ()
+{
+	int a = 0x11223344;
+	//int * pa = &a ;
+	// *pa = 0
+
+	//char * pc = &a ; 
+	//char * ->  仅仅访问一个字节
+	int * pc = &a ;
+	*pc = 0 ;
+	//当pc指针的类型不是相对应的时，将像如下所说，访问的字节数改变，导致解引用操作错误
+
+	//printf("%p\n",pa);
+	//printf("%p\n",pc);
+
+	return 0 ;
+}
+
+//指针类型决定了指针进行解引用操作的时候，能够访问空间的大小
+//int * p    能够访问4个字节
+//char * p   能够访问1个字节
+//double * p 能够访问8个字节
