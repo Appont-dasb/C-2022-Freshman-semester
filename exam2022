@@ -1899,6 +1899,7 @@ int main()
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
+//指针的意义
 int main ()
 {
 	int a = 0x11223344;
@@ -1921,3 +1922,23 @@ int main ()
 //int * p    能够访问4个字节
 //char * p   能够访问1个字节
 //double * p 能够访问8个字节
+
+
+int main()
+{
+	int a = 0x11223344 ;
+	int * pa = &a ;
+	char * pc = &a ;
+
+	printf("%p\n", pa); //00AFFB40
+	printf("%p\n", pa+1); //00AFFB44
+
+	printf("%p\n", pc); //00AFFB40
+	printf("%p\n", pc+1); //00AFFB41
+	return 0 ;
+}
+
+//指针类型决定了：指针走一步走多远（指针的步长）
+//int * p; p + 1 --> 4
+//char * p; p + 1 --> 1
+//double * p;  p + 1 --> 8
