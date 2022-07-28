@@ -2090,3 +2090,17 @@ int main()
 
 	return 0 ;
 }
+
+
+//二级指针
+int main()
+{
+	int a = 10 ;
+	int * pa = &a ;
+	int * * ppa = &pa; //pa就是二级指针
+	**ppa = 9 ;
+	printf("%d\n",a);
+	//int ** *pppa = &ppa ;
+	return 0 ;
+}
+
