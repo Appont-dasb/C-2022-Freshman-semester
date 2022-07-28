@@ -2026,3 +2026,47 @@ int main()
 	//printf("%d\n",&arr[9] - &ch[0]); //err
 	return 0 ;
 }
+
+
+//计算字符串长度的第3种写法
+int count(char * str)
+{
+	char * start = str ;
+	char * end = str ;
+	while(*end != '\0')
+	{
+
+		end ++ ;
+	}
+	return end - start ;
+}
+int main()
+{
+	//
+	//strlen - 求字符串长度
+	//递归 - 模拟实现了strlen - 计数器的方式1，递归的方式2
+	//
+	char arr[10] = "hello!" ;
+	int len = count(arr);
+	printf("%d\n",len);
+	return 0 ;
+}
+
+
+//初始化数组
+#define N_VALUES   5
+int main()
+{
+	float values[N_VALUES] ;
+	float *vp ;
+	for(vp = &values[N_VALUES] ; vp >&values[0] ;)//5 4 3 2 1
+	{
+		*--vp = 0;
+	}
+	//for(vp = &values[N_VALUES] ; vp >=&values[0] ; vp--) //不符合C语言的语法规则，会出现values[-1]
+	//{
+	//	*vp = 0 ;
+	//}
+	return 0 ;
+
+}
