@@ -1986,3 +1986,17 @@ int main()
 
 	return 0 ;
 }
+
+//避免野指针
+int main ()
+{
+	int a = 10 ;
+	int * p = &a ;
+
+	int * pc  = NULL ; //#define NULL    ((void *)0)
+	//在不知道指针该初始化为什么时，可以用NULL代替。
+
+	p = NULL ;//当原本的空间被释放，或是不想p指向a时，将p变成空指针。
+
+	return 0;
+}
