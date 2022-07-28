@@ -2070,3 +2070,23 @@ int main()
 	return 0 ;
 
 }
+
+
+//数组名
+int main()
+{
+	int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+	printf("%p\n",arr);//地址 - 首元素地址
+	printf("%p\n",arr+1);
+
+	printf("%p\n",&arr[0]);
+	printf("%p\n",&arr[0]+1);
+
+	printf("%p\n",&arr);
+	printf("%p\n",&arr+1);
+
+	//1.&arr - 数组名 - 数组名不是首元素地址 - 数组名表示整个数组
+	//2.sizeof(arr) - sizeof(数组名) - 数组名表示的整个数组 - sizeof(数组名)计算的是整个数组的大小
+
+	return 0 ;
+}
