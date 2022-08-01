@@ -16,3 +16,20 @@ struct stu//stu结构体标签 //结构体声明
 	char set[5] ;
 
 }s1 ,s2 ,s3;//variable-list;变量列表 //s1,s2,s3是全局变量
+
+
+
+typedef struct stu//typedef 重命名结构体变量名称
+{
+	char name[20] ;//member-list成员列表
+	short age ;
+	char tele[12];
+	char set[5] ;
+
+}stu;//stu是类型（struct stu也是） 
+int main()
+{
+	struct stu s1 ; //这里是在创建结构体变量 - 局部变量
+	stu s2 ;
+	return 0 ;
+}
