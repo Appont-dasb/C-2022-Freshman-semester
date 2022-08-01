@@ -16,3 +16,55 @@ struct stu//stu结构体标签 //结构体声明
 	char set[5] ;
 
 }s1 ,s2 ,s3;//variable-list;变量列表 //s1,s2,s3是全局变量
+
+
+
+typedef struct stu//typedef 重命名结构体变量名称
+{
+	char name[20] ;//member-list成员列表
+	short age ;
+	char tele[12];
+	char set[5] ;
+
+}stu;//stu是类型（struct stu也是） 
+int main()
+{
+	struct stu s1 ; //这里是在创建结构体变量 - 局部变量
+	stu s2 ;
+	return 0 ;
+}
+
+
+// 描述一个学生-一些数据
+// 名字
+// 年龄
+// 电话
+// 性别
+struct S
+{
+	int a ;
+	char c;
+	char arr[20];
+	double d;
+};
+
+struct T
+{
+	char ch[10];
+	struct S s; //struct S只是类型！！后面需要有变量名！ //结构体声明中可以包含结构体
+	char *pc ;
+};
+
+int main()
+{
+	char arr[] = "hello bit\n";
+	struct T t = {"hehe",{100, 'w', "hello world!", 3.14}, arr};
+
+	printf("%s\n",t.ch); //hehe
+	printf("%d\n",t.s.a); //100
+	printf("%lf\n",t.s.arr); //hello world!
+	printf("%s\n",t.pc); //hello bit
+
+
+	return 0;
+}
