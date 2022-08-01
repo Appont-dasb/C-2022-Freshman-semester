@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+ 
+
+//错误：bug
+//找bug：调试
+
+//结构体
+//结构体是由一批数据组合而成的一种新的数据类型，组成结构型数据的每个数据称为结构型数据的“成员”
+//先声明，再创建变量
+struct stu//stu结构体标签 //结构体声明
+{
+	char name[20] ;//member-list成员列表
+	short age ;
+	char tele[12];
+	char set[5] ;
+
+}s1 ,s2 ,s3;//variable-list;变量列表 //s1,s2,s3是全局变量
