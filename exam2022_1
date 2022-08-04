@@ -1312,7 +1312,7 @@ void bubble_sort(int arr[] , int sz)
 int main()
 
 {
-	int arr[] = {8,9,7,1,2,3,4,5,6,0};
+	int arr[] = {8, 9, 7, 1, 2, 3, 4, 5, 6, 0};
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	//对arr进行排序，排成升序
 	//arr是数组，我们对数组arr进行传参，实际上传递过去的是数组arr首元素的地址，&arr[0]
@@ -1321,7 +1321,7 @@ int main()
 	//冒泡法排序函数
 	for(i=0; i<=sz-1; i++)
 	{
-		printf("%d ",arr[i]);
+		printf("%d ", arr[i]);
 	}
 	return 0;
 }
@@ -2068,4 +2068,3 @@ int main()
 
 //堆、栈、全局/静态存储区构成了：数据区
 //C/C++内存分区其实只有两个，即代码区和数据区
-
